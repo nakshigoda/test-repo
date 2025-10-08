@@ -221,12 +221,6 @@ function updatePointers(iIndex, jIndex) {
   }
 }
 
-function undoStep() {
-  if (!stepMode || historyStack.length === 0) {
-    alert("Undo only works in step mode and after at least one step.");
-    return;
-  }
-
   const lastStep = historyStack.pop();
   values = [...lastStep.prevArray];
 
@@ -243,3 +237,4 @@ function undoStep() {
     blocks[j + 1].style.backgroundColor = "#4caf50";
   }, 300);
 }
+
